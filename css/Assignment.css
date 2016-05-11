@@ -52,7 +52,8 @@ p
   font-size:1.2em;
 }
 h1{
-  text-align: center;
+  vertical-align: center;
+  
   color:red;
 
 }
@@ -74,6 +75,7 @@ align="center";
   padding-left: 10px;
   padding-right: 10px;
   word-wrap: break-word;
+
 
 }
 
