@@ -37,10 +37,16 @@ p
 
 
 }
+<<<<<<< HEAD
 #s1{
    vertical-align:center;
    
 }
+=======
+
+  
+
+>>>>>>> 5af286c957718cdb16bfe275cb9d2cae25b132c3
   
 
 #p1 {
@@ -54,9 +60,14 @@ p
   font-size:1.2em;
 }
 h1{
+<<<<<<< HEAD
     text-align: center;
     color:red;
     font-style: italic;
+=======
+  text-align: center;
+    color:red;
+>>>>>>> 5af286c957718cdb16bfe275cb9d2cae25b132c3
 
 }
 
