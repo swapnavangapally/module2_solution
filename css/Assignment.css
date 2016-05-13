@@ -91,10 +91,11 @@ align="center";
   width: 100%;
 
 
+
 }
 
 /********** Large devices only **********/
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   #s1{
     margin-left: 150px;
   }
