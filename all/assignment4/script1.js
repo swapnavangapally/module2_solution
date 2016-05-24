@@ -1,4 +1,4 @@
-(function (window) {
+(function (global) {
   var hello = {};
   hello.name = "SWAPNA";
   var greeting = "Hello ";
@@ -6,6 +6,6 @@
     console.log(greeting + name);
   }
 
-  window.hello = hello;
+  global.hello = hello;
 
 })(window);

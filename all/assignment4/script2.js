@@ -1,4 +1,4 @@
-(function (window) {
+(function (global) {
   var goodbye = {};
   goodbye.name = "swapna";
   var greeting = "Good Bye";
@@ -6,6 +6,6 @@
     console.log(greeting + name);
   }
 
-  window.goodbye = goodbye;
+  global.goodbye = goodbye;
 
 })(window);

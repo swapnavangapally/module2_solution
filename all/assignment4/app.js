@@ -5,7 +5,7 @@
 // IIFE
 //
 var names= new Array();
-names=["Jhon" ,"abhi", "chythra", "ram", "jackson"];
+names=["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
 // for(var j=0;j<names.length;j++)
 // {
