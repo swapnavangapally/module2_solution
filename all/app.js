@@ -1,5 +1,5 @@
-hello.sayHello();
-goodbye.bye();
+// hello.sayHello();
+// goodbye.bye();
 
 // Immediately Invoked Function Expression
 // IIFE
@@ -21,18 +21,13 @@ names=["Jhon" ,"abhi", "chythra", "ram", "jackson"];
 
  	if(names[i].charAt(0).toLowerCase()==='j')
  	{
- 		(function (name) {
-  		console.log("good bye " + name);
-		})(names[i]);
-
+ 		
+ 		goodbye.bye(names[i]);
 
 	}
 	else
 	{
-		(function (name) {
-  		console.log(" hello  " + name);
-		})(names[i]);
-
+		hello.sayHello(names[i])
 
 	}
 	

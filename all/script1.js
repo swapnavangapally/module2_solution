@@ -2,8 +2,8 @@
   var hello = {};
   hello.name = "SWAPNA";
   var greeting = "Hello ";
-  hello.sayHello = function () {
-    console.log(greeting + hello.name);
+  hello.sayHello = function (name) {
+    console.log(greeting + name);
   }
 
   window.hello = hello;
