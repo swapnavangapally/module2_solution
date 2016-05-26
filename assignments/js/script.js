@@ -175,6 +175,7 @@ function buildCategoriesViewHtml(categories,
   for (var i = 0; i < categories.length; i++) {
     // Insert category values
     var html = categoryHtml;
+    console.log(html);
     var name = "" + categories[i].name;
     var short_name = categories[i].short_name;
     html = 
