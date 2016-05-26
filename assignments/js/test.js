@@ -14,7 +14,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
 var dc = {};
 
-var homeHtml = "snippets/home-snippet.html";
+var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl = 
   "http://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
@@ -77,7 +77,7 @@ function buildAndShowHomeHTML (categories) {
   
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
-       homeHtml,
+       homeHtmlUrl,
         function (homeHtml) {
           var chosenCategoryShortName =chooseRandomCategory(categories);
           randomCategoryShortName=chosenCategoryShortName.short_name;
