@@ -65,15 +65,47 @@ var switchMenuToActive = function () {
 document.addEventListener("DOMContentLoaded", function (event) {
   
 // On first load, show home view
+// my code
 showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
-  homeHtml, 
-  function (responseText) {
-    document.querySelector("#main-content")
-      .innerHTML = responseText;
-  }, 
-  false);
+  $ajaxUtils.sendGetRequest(
+      allCategoriesUrl,
+      buildAndShowHomeHTML, 
+  
+  true); 
 });
+
+
+function buildAndShowHomeHTML (categories) {
+  
+  // Load home snippet page
+  $ajaxUtils.sendGetRequest(
+       homeHtmlUrl,
+        function (homeHtml) {
+          var chosenCategoryShortName =chooseRandomCategory(categories);
+          randomCategoryShortName=chosenCategoryShortName.short_name;
+            var html;
+           var finalHtml = allCategoriesUrl;
+          html = 
+              insertProperty(html,"short_name" ,randomCategoryShortName);
+          finalHtml += html;
+
+          insertHtml("#main-content", finalHtml);
+        },
+        false);
+    }
+
+
+    function chooseRandomCategory (categories) {
+  // Choose a random index into the array (from 0 inclusively until array length (exclusively))
+  var randomArrayIndex = Math.floor(Math.random() * categories.length);
+
+  // return category object with that randomArrayIndex
+  return categories[randomArrayIndex];
+}
+
+
+
+//end of my code
 
 // Load the menu categories view
 dc.loadMenuCategories = function () {
