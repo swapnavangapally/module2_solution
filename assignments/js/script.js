@@ -63,16 +63,26 @@ var switchMenuToActive = function () {
 
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
+  showLoading("#main-content");
+$ajaxUtils.sendGetRequest(
+  homeHtml, 
+  function (responseText) {
+    document.querySelector("#main-content")
+      .innerHTML = responseText;
+  }, 
+  false);
+});
+
   
 // On first load, show home view
 // my code
-showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
-      allCategoriesUrl,
-      buildAndShowHomeHTML, 
+// showLoading("#main-content");
+//   $ajaxUtils.sendGetRequest(
+//       allCategoriesUrl,
+//       buildAndShowHomeHTML, 
   
-  true); 
-});
+//   true); 
+// });
 
 
 function buildAndShowHomeHTML (categories) {
