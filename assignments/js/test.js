@@ -85,20 +85,14 @@ function buildAndShowHomeHTML (categories) {
           randomCategoryShortName=chosenCategoryShortName.short_name;
           console.log(randomCategoryShortName)
              var html=homeHtmlUrl;
-            console.log(html);
-           var finalHtml = allCategoriesUrl;
+            // console.log(html);
+           var finalHtml = menuItemsUrl;
           var html = 
               insertProperty(html,"short_name" ,randomCategoryShortName);
-             // console.log(html);
-          // finalHtml += html;
-          // console.log(finalHtml);
-           // var homeHtmlToInsertIntoMainPage = 
-           //                buildCategoriesViewHtml(categories, 
-           //                          categoriesTitleHtml,
-           //                          finalHtml);
-           //                console.log(homeHtmlToInsertIntoMainPage);
-
-          // insertHtml("#main-content", finalHtml);
+             console.log(html);
+          finalHtml += randomCategoryShortName;
+          
+          insertHtml("#main-content", finalHtml);
         },
         false);
     }
