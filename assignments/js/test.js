@@ -84,13 +84,14 @@ function buildAndShowHomeHTML (categories) {
 
           randomCategoryShortName=chosenCategoryShortName.short_name;
           console.log(randomCategoryShortName)
-             var html=homeHtmlUrl;
+             var html=menuItemHtml;
             // console.log(html);
-           var finalHtml = menuItemsUrl;
+           var finalHtml = menuItemsTitleHtml;
           var html = 
               insertProperty(html,"short_name" ,randomCategoryShortName);
              console.log(html);
           finalHtml += randomCategoryShortName;
+          console.log(finalHtml);
           
           insertHtml("#main-content", finalHtml);
         },
